@@ -28,6 +28,9 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/add-book',[TestController::class,'store'])->middleware(['auth','verified']);
+
+
 
 Route::get('/test',[TestController::class,'index']);
 

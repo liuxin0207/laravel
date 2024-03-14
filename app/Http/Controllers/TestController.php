@@ -19,7 +19,18 @@ class TestController extends Controller
             'response' => $data,
         ]);
     }
-    public function create(){
-        
+    public function store(){
+        Book::create([
+            'name'=>'哈利波特',
+            'price'=>'500'
+
+        ]);
+        return Inertia::render('Dashboard');
     }
+
+    
+
+
+
+
 }
